@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import { io } from 'socket.io-client';
 import Scribble from './components/Scribble';
+import { useSocket } from './context/SocketProvider';
 
-export const socket = io(import.meta.env.VITE_SERVER_URL);
 
 function App() {
+
+  const socket = useSocket()
+
   return (
     <BrowserRouter>
       <div>

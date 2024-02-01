@@ -1,7 +1,7 @@
 import { useState, SyntheticEvent } from "react";
-import { socket } from "../App";
 
-const ScribbleFooter = ({ typingStatus }: ScribbleFooter) => {
+
+const ScribbleFooter = ({ typingStatus, socket }: ScribbleFooter) => {
 
   const [message, setMessage] = useState<string>('');
 

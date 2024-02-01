@@ -1,3 +1,4 @@
+
 type SocketType = {
     socket: Socket
 }
@@ -23,6 +24,7 @@ type ScribbleBody = {
 
 type ScribbleFooter = {
     typingStatus: string
+    socket: Socket
 }
 
 type UserTyping = {

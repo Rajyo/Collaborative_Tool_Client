@@ -55,7 +55,7 @@ const Sribble = ({ socket }: SocketType) => {
                         lastMessageRef={lastMessageRef}
                     />
                 </section>
-                <ScribbleFooter typingStatus={typingStatus} />
+                <ScribbleFooter typingStatus={typingStatus} socket={socket}/>
             </div>
 
         </main>
