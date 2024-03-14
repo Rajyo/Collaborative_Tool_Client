@@ -26,7 +26,7 @@ const ScribbleFooter = ({ typingStatus, socket }: ScribbleFooter) => {
 
   return (
     <div className="bg-white">
-      {typingStatus ? <p className="pl-2 py-1 text-blue-900 text-base italic animate-pulse">{typingStatus}...</p> : <p className="pl-2 py-1 text-base italic animate-pulse text-white">...</p>}
+      {typingStatus != '' ? <p className="pl-2 py-1 text-blue-900 text-base italic animate-pulse">{typingStatus}...</p> : <p className="pl-2 py-1 text-base italic animate-pulse text-white">...</p>}
       <form className="flex justify-between flex-wrap gap-2 p-[7px] border" onSubmit={handleSendMessage}>
         <input
           type="text"

@@ -1,3 +1,5 @@
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -12,14 +14,14 @@ const ScribbleBody = ({ messages, lastMessageRef }: ScribbleBody) => {
   };
 
   const roomName = localStorage.getItem('roomName')
-
+  window.onbeforeunload = function () {return false;}
   return (
     <>
       <header className="px-2 flex justify-between py-4 h-20 ">
         <p className='text-2xl py-1 font-bold'>{roomName}</p>
-        <button className="p-2 bg-red-700 text-white rounded-md" onClick={handleLeaveChat}>
-          LEAVE ROOM
-        </button>
+          <button className="p-2 bg-red-700 font-bold text-white rounded-md" onClick={handleLeaveChat}>
+            LEAVE <FontAwesomeIcon className='pl-2 text-lg self-baseline' icon={faRightFromBracket} />
+          </button>
       </header>
 
       <p className='border-b'></p>

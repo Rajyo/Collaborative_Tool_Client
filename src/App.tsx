@@ -13,7 +13,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home socket={socket} />}></Route>
-          <Route path="/scribble" element={<Scribble socket={socket} />}></Route>
+          <Route path="/scribble/:id" element={<Scribble socket={socket} />}></Route>
         </Routes>
       </div>
     </BrowserRouter>
